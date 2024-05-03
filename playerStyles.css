@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    /* border: 1px solid black; */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+body {
+    background-image: url(./img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+
+.fa-user{
+    display: flex;
+    justify-content: right;
+    background-color: #00FF0000; /* Color de fondo para el fav */
+    color: #fa34df; 
+    font-size: 50px;
+    padding-right: 220px;
+    text-shadow: 2px 2px 1px #65cbe9;
+    
+    
+}
+.fa-user:hover {
+    transition: all .5s;
+    text-shadow: 5px 5px #65cbe9;  
+    color: #F8F8F0;
+    
+}
+
+
+
+main {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.titulo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    margin-top: 2%;
+    gap: 600px;
+
+    
+}
+
+input {
+    background-color: #dfded5;
+    border: #fff solid 1px;
+    border-radius: 20px;
+    color: #000000;
+    height: 35px;
+    width: 530px;
+    padding-left: 8px;
+}
+#buscarBtn{
+    background-color: #65cbe9;
+    border-radius: 15px;
+    border: #00FF0000 ;
+    padding: 9px 17px;
+  margin:10px 4px;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  
+}
+#buscarBtn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 5px 5px  #4E02BB;
+    background-color: #dfb2f4;
+    color: #F8F8F0;
+    
+}
+#buscarBtn:hover span{
+    animation-play-state: paused;
+}
+
+.playbtn {
+    background-color: #00FF0000; /* Color de fondo para el botón de paly */
+    color:#9a70d8; 
+    font-size: 20px;
+    
+}
+.playbtn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+
+}
+
+.fav-btn {
+    background-color: #00FF0000; /* Color de fondo para el fav */
+    color: #b56aab; 
+    font-size: 20px;
+}
+.fav-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+}
+
+.add-playlist-btn {
+    background-color: #00FF0000; /* Color de fondo para el add */
+    color: #d99eac ; 
+    font-size: 20px;
+}
+.add-playlist-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+}
+.remove-fav-btn{
+    background-color: #00FF0000; /* Color de fondo para el add */
+    color: #165ec3 ; 
+    font-size: 20px;
+}
+.remove-fav-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+}
+.remove-playlist-btn{
+    background-color: #00FF0000; /* Color de fondo para el add */
+    color: #2e90a7 ; 
+    font-size: 20px;
+}
+.remove-playlist-btn:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+}
+
+button {
+    border: none; 
+    cursor: pointer; 
+}
+
+  /* Cambia el color de fondo al pasar el ratón */
+button:hover {
+    opacity: 0.8; /* Reducir la opacidad al pasar el ratón */
+}
+
+h1 {
+    display: inline-block;
+          
+    
+}
+.re {
+    
+    font-family: "Kanit", sans-serif;
+    font-weight: 800;
+    font-size: 70px;
+  
+    color: #fa34df;
+    margin-left: 500px;
+    text-shadow: 6px 6px 1px #4E02BB;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+  
+}
+
+img {
+    width: 350px;
+    height: 350px;
+    padding: 10%; width: 100%;
+    height: 366px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transform-origin: 0% 0%;
+}
+
+.info{
+    position: absolute;
+    left: 50%;
+    top: 440px;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.info h2{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.controls{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 100px;
+    z-index: 10;
+    transition: all 0.3s;
+    color: #4E02BB ;
+}
+/* .controls:hover {
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+    
+} */
+#mutearBtn:hover {
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+    
+}
+#prev:hover{
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+}
+#pausarBtn:hover{
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+}
+#next:hover{
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+}
+#stopBtn:hover{
+    transition: all .5s;
+    text-shadow: 5px 5px #e1b1bc;  
+    color:#fa34df;
+    cursor: pointer;
+}
+
+.controles {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor1 {
+    height: 800px;
+    width: 680px;
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 10px; */
+    background-color: #fff;
+    /* box-shadow: 5px 5px 1px #65cbe9; */
+    border: 5px solid #65cbe9;
+    padding-left: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+
+.contenedor2 {
+    height: 600px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 8px 10px 1px #fa34df;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.playlist{
+    
+    height: 425px;
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 378px;
+    transform-origin: 0%, 0%;
+    transition: all 0.3s;
+}
+/*scroll que si funciona*/
+#listaCanciones {
+    /* Altura máxima para el div */
+    max-height: 200px;
+    color: #2f2c79;
+    list-style: none;
+    /* scroll vertical */
+    overflow-y: auto;
+    border-bottom:2px solid #65cbe9;
+    
+}
+
+#listaCanciones::-webkit-scrollbar {
+    width: 15px; /* Ancho del scroll */
+}
+
+#listaCanciones::-webkit-scrollbar-thumb {
+    background-color: #eac4d5; /* Color del scroll */
+    border-radius: 7px; /* Borde redondeado */
+    width: 15px; /* Ancho del scroll */
+}
+
+#listaCanciones::-webkit-scrollbar-thumb:hover {
+    background-color: #dfb2f4;
+}
+/*scroll que no funciona*/
+#listaPlaylist {
+    /* Altura máxima para el div */
+    max-height: 200px;
+    color: #2f2c79;
+    list-style: none;
+    /* scroll vertical */
+    overflow-y: auto;
+    border-bottom:2px solid #65cbe9;
+}
+#listaPlaylist::-webkit-scrollbar {
+    width: 15px; /* Ancho del scroll */
+}
+
+#listaPlaylist::-webkit-scrollbar-thumb {
+    background-color: #eac4d5; /* Color del scroll */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+#listaPlaylist::-webkit-scrollbar-thumb:hover {
+    background-color: #dfb2f4;
+}
+/*sroll que no funciona*/
+#listaFavoritos {
+    /* Altura máxima para el div */
+    max-height: 200px;
+    color: #2f2c79;
+    list-style: none;
+    /* scroll vertical */
+    overflow-y: auto;
+    border-bottom:2px solid #65cbe9;
+}
+#listaFavoritos::-webkit-scrollbar {
+    width: 15px; /* Ancho del scroll */
+}
+
+#listaFavoritos::-webkit-scrollbar-thumb {
+    background-color: #eac4d5; /* Color del scroll */
+    border-radius: 5px; /* Borde redondeado */
+}
+
+#listaFavoritos::-webkit-scrollbar-thumb:hover {
+    background-color: #dfb2f4;
+    width: 15px; /* Ancho del scroll */
+}
+
+
+
+.resultados {
+    padding: 10%;
+    background-color: #D97EB0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+#nombre,#anio, #genero{
+    color: #520f6d;
+    font-size:larger;
+}
+#artista,#duracion{
+    color: #161b84;
+    font-size: larger;
+}
+
+
+.favoritos {
+    padding: 10%;
+    background-color: #2F3A59;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+
+.datosCancion {
+    padding: 10%;
+}
+
+i{
+    background-color: #00FF0000;
+    
+    border-color: #00FF0000;
+}
+
+div{
+    margin-bottom: 2%;
+}
+
+h4{
+    margin-bottom: 2%;
+}
+
+h3{
+    margin-bottom: 2%;
+}
+/* hr {
+    background-color: red;
+} */
+
+/* Animacion del texto "Reproductor", etiqueta re */
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateX(10px);
+	}
+
+	80% {
+		transform: translateX(8px);
+	}
+
+	90% {
+		transform: translateX(-8px);
+	}
+}
